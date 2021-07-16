@@ -4,10 +4,10 @@ const { Pool } = require("pg");
 // Configure the database connection.
 
 const config = {
-  user: "adarsha",
-  password: "@MLHpassword123",
-  host: "free-tier5.gcp-europe-west1.cockroachlabs.cloud",
-  database: "basic-mink-643.defaultdb",
+  user: "username",
+  password: "password",
+  host: "host-name",
+  database: "db-name",
   port: 26257,
   ssl: {
     rejectUnauthorized: false,
