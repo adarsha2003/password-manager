@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <head>
     {{>header}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+    $('#example').DataTable( {
+        "ajax": {
+            "url": "/api/showpasswd",
+            "dataSrc": ""
+        },
+        "columns": [
+            { "data": "id" },
+            { "data": "tagname" },
+            { "data": "url" },
+            { "data": "username" },
+            { "data": "email" },
+            { "data": "password" }
+        ]
+    } );
+} );
+    </script>
 </head>
 <body>
     {{>navbar}}
@@ -24,5 +45,19 @@
     </div>
   </div>
 </div>
+
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>tagname</th>
+                <th>url</th>
+                <th>username</th>
+                <th>email</th>
+                <th>password</th>
+            </tr>
+        </thead>
+    </table>
 {{>footer}}
 </body>
+</html>
