@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./db/database-config");
+const db = require("./db/conn");
 const path = require("path");
 const app = express();
 const port = process.env.port || 3000;
@@ -31,26 +31,17 @@ hbs.registerPartials(partials_path)
 app.get("/",(req,res) => {
   res.render("index");
 })
-app.get("/post-login",(req,res) => {
-  res.render("post-login");
+app.get("/getstarted",(req,res) => {
+  res.render("getstarted");
 })
-app.get("/login",(req,res) => {
-  res.render("login");
+app.get("/pass-saved",(req,res) => {
+  res.render("pass-saved");
 })
-app.get("/interestform",(req,res) => {
-  res.render("interestform");
+app.get("/add-passwd",(req,res) => {
+  res.render("add-passwd");
 })
-app.get("/passwords",(req,res) => {
-  res.render("passwords");
-})
-app.get("/thanks-for-your-interest",(req,res) => {
-  res.render("thanks-for-your-interest");
-})
-app.get("/feedback",(req,res) => {
-  res.render("feedback");
-})
-app.get("/guide",(req,res) => {
-  res.render("guide");
+app.get("/github",(req,res) => {
+  res.render("github");
 })
 
 //app.get(path, callback)
@@ -67,20 +58,12 @@ app.use(
     response.status(401).json(`Unauthorized/Forbidden`);
   })
   
-  app.get('/api/users', db.getUsers) 
+  app.get('/api/showpasswd', db.showpasswd) 
   app.get('/api/users/:id', db.getUserById)
-  app.post('/api/interestform', db.interestform)
-  app.post('/api/feedbacksubmit', db.feedbacksubmit)
+  app.post('/api/addpasswd', db.addpasswd)
   app.put('/api/users/:id', db.updateUser)
   app.delete('/api/users/:id', db.deleteUser)
-  app.post('/post-login', db.postlogin) 
 
-
-
-  app.get('/api/passwd', (request, response) => {
-    response.status(401).json(`Unauthorized/Forbidden`);
-
-  })
 
 //server create
 app.listen(port, () => {
