@@ -59,10 +59,7 @@ app.use(
   })
   
   app.get('/api/showpasswd', db.showpasswd) 
-  app.get('/api/users/:id', db.getUserById)
   app.post('/api/addpasswd', db.addpasswd)
-  app.put('/api/users/:id', db.updateUser)
-  app.delete('/api/users/:id', db.deleteUser)
 
 
 //server create
