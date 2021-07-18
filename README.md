@@ -10,10 +10,10 @@ A Computer with node.js installed. You can install it from https://nodejs.org/en
 ```
 git clone https://github.com/adarsha2003/Passnotes
 ```
-OR you can also fork this reposiroty
+*OR you can also fork this reposiroty
 2. Edit conn.js file in /src/db/conn.js, with your database connection details
-3. (Optional) You can change port to run this app, by editing /src/app.js
-4. Go to root directory of this project then run this command to install dependencies
+4. (Optional) You can change port to run this app, by editing /src/app.js
+5. Go to root directory of this project then run this command to install dependencies
 ```
 cd Passnotes
 npm install
