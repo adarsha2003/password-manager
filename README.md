@@ -1,11 +1,11 @@
 # PassNotes - A personal Password Manager
 I am developing password manager for BON VOYAGE MLH hackathon
 
-# Requirements:
+# ✔️Requirements:
 
 A Computer with node.js installed. You can install it from https://nodejs.org/en/download/
 
-# How to Deploy?
+# 🤔How to Deploy?
 1.First clone this repository using command
 ```
 git clone https://github.com/adarsha2003/Passnotes
