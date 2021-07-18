@@ -1,23 +1,20 @@
 {
-  "name": "project",
+  "name": "Pasnotes",
   "version": "1.0.0",
-  "description": "",
+  "description": "PassNotes - A personal Password Manager",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js -e js,hbs"
+    "passnotes": "nodemon src/app.js -e js,hbs"
   },
   "keywords": [],
-  "author": "",
+  "author": "https://github.com/adarsha2003",
   "license": "ISC",
   "dependencies": {
-    "async": "^3.2.0",
     "bootstrap": "^5.0.2",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
     "nodemon": "^2.0.12",
-    "pg": "^8.6.0",
-    "pg-escape": "^0.2.0",
-    "pg-promise": "^10.10.2"
+    "pg": "^8.6.0"
   }
 }
