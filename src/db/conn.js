@@ -31,17 +31,7 @@ const showpasswd = (request, response) => {
       response.status(200).json(results.rows)
     })
   }
-  
-  const getUserById = (request, response) => {
-    var username = request.params.username
-    pool.query('SELECT * FROM users WHERE username = $1', [username], (error, results) => {
-      if (error) {
-        throw error
-      }
-      response.status(200).json(results.rows)
-      console.log(`results:`, results.rows)
-    })
-  }
+
   
   const addpasswd = (request, response) => {
     const { id, tagname, url, username, email, password } = request.body
@@ -58,38 +48,9 @@ const showpasswd = (request, response) => {
     })
     )}
 
-  const updateUser = (request, response) => {
-    const id = parseInt(request.params.id)
-    const { name, email } = request.body
-  
-    pool.query(
-      'UPDATE users SET name = $1, email = $2 WHERE id = $3',
-      [name, email, id],
-      (error, results) => {
-        if (error) {
-          throw error
-        }
-        response.status(200).send(`User modified with ID: ${id}`)
-        app
-      }
-    )
-  }
-  
-  const deleteUser = (request, response) => {
-    const id = parseInt(request.params.id)
-  
-    pool.query('DELETE FROM users WHERE id = $1', [id], (error, results) => {
-      if (error) {
-        throw error
-      }
-      response.status(200).send(`User deleted with ID: ${id}`)
-    })
-  }
+
   
   module.exports = {
     showpasswd,
-    getUserById,
-    addpasswd,
-    updateUser,
-    deleteUser
+    addpasswd
   }
