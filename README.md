@@ -1,6 +1,28 @@
 # PassNotes - A personal Password Manager
 I am developing password manager for BON VOYAGE MLH hackathon
 
+# Requirements:
+
+A Computer with node.js installed. You can install it from https://nodejs.org/en/download/
+
+# How to Deploy?
+1.First clone this repository using command
+```
+git clone https://github.com/adarsha2003/Passnotes
+```
+OR you can also fork this reposiroty
+2. Edit conn.js file in /src/db/conn.js, with your database connection details
+3. (Optional) You can change port to run this app, by editing /src/app.js
+4. Go to root directory of this project then run this command to install dependencies
+```
+cd Passnotes
+npm install
+```
+5. Run this command in terminal to start the node.js server
+```
+npm run passnotes
+```
+6. Go to http://localhost:3000 to view application
 ## Inspiration
 We can see a lot of paid tools on internet which provides service to manage a users passwords. I thought why can't i build a application which uses Cockroach DB to store password, Node.js to host web application. This will be my first step of Contribution to Open Source Projects.
 ## What it does
