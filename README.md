@@ -4,6 +4,12 @@ I am developing password manager for BON VOYAGE MLH hackathon
 # ✔️Requirements:
 
 A Computer with node.js installed. You can install it from https://nodejs.org/en/download/
+Install Nde.js and NPM in ubuntu
+```
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+```
 
 # 🤔How to Deploy?
 1.First clone this repository using command
