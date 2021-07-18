@@ -22,3 +22,21 @@ body
 .custom-btn{
     padding: 20px;
 }
+.custom-navbar{
+    background-color: rgb(27, 21, 21);
+    border-radius: 36px;
+}
+.custom-navbar ul{
+    overflow: auto;
+}
+.custom-navbar li{
+    float: left;
+    list-style: none;
+    margin: 13px 20px;
+}
+.custom-navbar a{
+    padding: 13px 3px;
+    text-decoration: none;
+    color: white;
+
+}
