@@ -24,13 +24,18 @@ const config = {
 const pool = new Pool(config);
 
 const showpasswd = (request, response) => {
+  pool.query('CREATE TABLE IF NOT EXISTS passwords (id STRING NOT NULL, tagname STRING NOT NULL, url STRING NOT NULL, username STRING NOT NULL, email STRING, password STRING, CONSTRAINT "primary" PRIMARY KEY (id ASC, url ASC, password ASC))',  (error, results) => {
+    if (error) {
+      throw error
+    }
+    console.log(`Created User table if it does not exist`)},
     pool.query('SELECT * FROM passwords', (error, results) => {
       if (error) {
         throw error
       }
       response.status(200).json(results.rows)
     })
-  }
+  )}
 
   
   const addpasswd = (request, response) => {
