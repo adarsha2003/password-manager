@@ -5,9 +5,9 @@ const { Pool } = require("pg");
 
 const config = {
   user: "adarsha",
-  password: "I_h7Fjy7qsn8ARsC",
+  password: "Wb1Bfu1XqM4LQkXX",
   host: "free-tier8.aws-ap-southeast-1.cockroachlabs.cloud",
-  database: "passnotes-139.defaultdb",
+  database: "passnotes-140.defaultdb",
   port: 26257,
   ssl: {
     rejectUnauthorized: false,
